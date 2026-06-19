@@ -1,6 +1,43 @@
 [package]
 name = "flwing"
 version = "0.1.0"
-edition = "2024"
+edition = "2021"
+description = "Flwing — 벡터 그래픽 디자인 애플리케이션 (Fly + Wing)"
+authors = ["Rhee Hose"]
+license = "MIT"
 
 [dependencies]
+# GUI Framework
+eframe = "0.31"
+egui = "0.31"
+egui_extras = { version = "0.31", features = ["image"] }
+
+# Vector path tessellation
+lyon = "1.0"
+
+# Font parsing & text shaping
+ttf-parser = "0.25"
+swash = "0.2"
+
+# Image tracing (raster → vector)
+vtracer = "0.6"
+
+# Serialization for .flw format
+serde = { version = "1", features = ["derive"] }
+bincode = "1"
+
+# Image loading
+image = "0.25"
+
+# Noise generation
+noise = "0.9"
+
+# Internationalization
+sys-locale = "0.3"
+
+# Utilities
+uuid = { version = "1", features = ["v4", "serde"] }
+once_cell = "1.20"
+log = "0.4"
+env_logger = "0.11"
+rfd = "0.15"   # native file dialogs
